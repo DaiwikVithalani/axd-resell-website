@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>axd.resell - Yeezy Slides</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="min-h-screen p-6 flex flex-col items-center">
+    <header class="text-center mb-10">
+      <h1 class="text-4xl font-bold mb-2">axd.resell</h1>
+      <p class="text-lg">Your plug for Yeezy Slides – Only $60</p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Product Card 1 -->
+      <div class="max-w-md bg-white p-6 rounded-2xl shadow-lg">
+        <img src="https://images.stockx.com/images/adidas-Yeezy-Slide-Bone-2022-Product.jpg" alt="Yeezy Slides - Bone" class="rounded-xl mb-6">
+        <h2 class="text-2xl font-semibold mb-2">Yeezy Slides - Bone</h2>
+        <p class="text-gray-600 mb-4">Limited stock. Super comfy. Premium design.</p>
+        <p class="text-xl font-bold mb-4">$60.00</p>
+
+        <label class="block mb-2 font-medium">Choose Size</label>
+        <select id="size-select-1" class="w-full mb-4 p-2 border rounded">
+          <option value="8">Size 8</option>
+          <option value="9">Size 9</option>
+          <option value="10">Size 10</option>
+          <option value="11">Size 11</option>
+          <option value="12">Size 12</option>
+        </select>
+
+        <button onclick="openCheckout('1')" class="bg-black text-white w-full py-2 rounded">Buy Now</button>
+      </div>
+
+      <!-- Product Card 2 (Updated Image) -->
+      <div class="max-w-md bg-white p-6 rounded-2xl shadow-lg">
+        <img src="https://images.stockx.com/images/adidas-Yeezy-Slide-Onyx-2022-Product.jpg" alt="Yeezy Slides - Onyx" class="rounded-xl mb-6">
+        <h2 class="text-2xl font-semibold mb-2">Yeezy Slides - Onyx</h2>
+        <p class="text-gray-600 mb-4">Limited stock. Super comfy. Premium design.</p>
+        <p class="text-xl font-bold mb-4">$60.00</p>
+
+        <label class="block mb-2 font-medium">Choose Size</label>
+        <select id="size-select-2" class="w-full mb-4 p-2 border rounded">
+          <option value="8">Size 8</option>
+          <option value="9">Size 9</option>
+          <option value="10">Size 10</option>
+          <option value="11">Size 11</option>
+          <option value="12">Size 12</option>
+        </select>
+
+        <button onclick="openCheckout('2')" class="bg-black text-white w-full py-2 rounded">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Checkout Form -->
+    <div id="checkout-form" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
+      <div class="bg-white p-6 rounded-xl w-full max-w-md">
+        <h3 class="text-xl font-bold mb-4">Enter Card Info</h3>
+        <input type="text" placeholder="Card Number" class="w-full p-2 mb-4 border rounded" />
+        <div class="flex gap-4 mb-4">
+          <input type="text" placeholder="MM/YY" class="w-1/2 p-2 border rounded" />
+          <input type="text" placeholder="CVV" class="w-1/2 p-2 border rounded" />
+        </div>
+        <input type="text" placeholder="Name on Card" class="w-full p-2 mb-4 border rounded" />
+        <button class="w-full bg-green-600 text-white py-2 rounded">Pay Now</button>
+        <button onclick="closeCheckout()" class="mt-2 w-full text-gray-500 text-sm">Cancel</button>
+      </div>
+    </div>
+
+    <footer class="mt-12 text-sm text-gray-500 text-center">
+      &copy; 2025 axd.resell. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    function openCheckout(id) {
+      document.getElementById("checkout-form").classList.remove("hidden");
+    }
+    function closeCheckout() {
+      document.getElementById("checkout-form").classList.add("hidden");
+    }
+  </script>
+</body>
+</html>
